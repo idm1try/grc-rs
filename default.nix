@@ -6,6 +6,6 @@ pkgs.rustPlatform.buildRustPackage {
   src = pkgs.lib.cleanSource ./.;
   postInstall = ''
     mkdir -p $out/etc
-    ln -s ${./grc} $out/etc/grc
+    ln -s ${./config} $out/etc/grc-rs
   '';
 }
